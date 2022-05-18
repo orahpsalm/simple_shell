@@ -3,7 +3,7 @@
 /**
  * exit_check - checks if user input is "exit". If so, exits the shell
  * @user_input: string that's to be compared to "exit"
- * #NAME: name of programme
+ * @NAME: name of programme
  * Return: 0 if not exit, -1 if exit has an invalid status attached
  */
 
@@ -19,14 +19,14 @@ int exit_check(char *user_input, char *NAME)
 	status = 0;
 	for (i = 0; i < 4; i++)
 	{
-		if(check[i] != user_input[i])
+		if (check[i] != user_input[i])
 			return (0);
 	}
 	if (user_input[4] != '\n' && user_input[4] != ' ')
-		return(0);
+		return (0);
 	if (lengh > 5)
 	{
-		nmber = malloc (sizeof(char) * size);
+		nmber = malloc(sizeof(char) * size);
 		for (i = 5; i < length - 1; i++)
 		{
 			if (user_input[i] >= '0' && user_input[i] <= '9')
@@ -50,13 +50,28 @@ int exit_check(char *user_input, char *NAME)
 	exit(status);
 }
 
+
 /**
- * blank_check - checksif user input is just a return
- * @user_input: string to compare to "\n\
- * Return: 1 if user_input is equal to '\n', 0 otherwise
+ * blank_check - checkks if user input is just a return
+ * @user_input: string to compart to newl
+ * Return: 1 if user_input equals newline character, else 0
  */
 
-int path_checker(char *command)
+int blank_check(char *user_input)
+{
+	if (user_input[0] == '\n')
+		return (1);
+	return (0);
+}
+
+
+/**
+ * path_check - checks command contains path
+ * @command: string to check for slash which denotes path
+ * Return: 0 if successfull, otherwise if failure, return -1
+ */
+
+int path_check(char *command)
 {
 	if (command[0] == '/')
 		return (0);
@@ -77,6 +92,7 @@ int env_check(char *user_input)
 
 	if (_strlen(user_input) != 4)
 		return (0);
+
 	while (env[i] != '\0')
 	{
 		if (env[i] != user_input[i])
