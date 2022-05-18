@@ -40,6 +40,7 @@ char **parse_input(char *user_input, char **path_array, char *NAME)
 {
 	char **commands, *token, *dir_path = NULL;
 	int args = 1, i = 0;
+	
 	args = arg_counter(user_input);
 	commands = malloc(sizeof(char *) * (args + 1));
 	if (commands == NULL)
@@ -67,8 +68,7 @@ char **parse_input(char *user_input, char **path_array, char *NAME)
 			exitcode = 126;
 			return (NULL);
 		}
-		commands[0] = _strdup(dir_path);
-		free(dir_path);
+		commands[0] = _strdup(dir_path); free(dir_path);
 	}
 	else
 		commands[0] = _strdup(token);
@@ -77,6 +77,5 @@ char **parse_input(char *user_input, char **path_array, char *NAME)
 		token = strtok(0, "\n ");
 		commands[i] = _strdup(token);
 	}
-	commands[i] = NULL;
-	return (commands);
+	commands[i] = NULL; return (commands);
 }
