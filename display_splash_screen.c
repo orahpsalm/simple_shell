@@ -10,6 +10,6 @@ void display_splash_screen(FILE *file_ptr)
 {
 	char read_string[MAX_LEN];
 
-	while(fgets(read_string, sizeof(read_string), file_ptr) != NULL)
+	while (fgets(read_string, sizeof(read_string), file_ptr) != NULL)
 		printf("%s", read_string);
 }
