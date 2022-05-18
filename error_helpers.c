@@ -33,7 +33,7 @@ void exec_error(__attribute__((unused))char *NAME, char *command)
 
 
 /**
- * access_error - prints an error message if user does not have execute privileges
+ * access_error - prints err message if user doesn't have execute privileges
  * @NAME: name of programme
  * @command: name of the command
  */
