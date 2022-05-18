@@ -10,10 +10,10 @@ int arg_counter(char *user_input)
 {
 	int args, start, i;
 
-  args = 1;
+	args = 1;
 	start = 0;
-  i = 0;
-  
+	i = 0;
+
 	while (user_input[i] != '\0' && user_input[i] != '\n')
 	{
 		if (user_input[i] != ' ')
@@ -40,7 +40,6 @@ char **parse_input(char *user_input, char **path_array, char *NAME)
 {
 	char **commands, *token, *dir_path = NULL;
 	int args = 1, i = 0;
-
 	args = arg_counter(user_input);
 	commands = malloc(sizeof(char *) * (args + 1));
 	if (commands == NULL)
