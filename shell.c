@@ -1,8 +1,5 @@
 #include "shell.h"
 
-int exitcode = 0;
-int errorcount = 0;
-
 /**
  * main - simple shell program written in C programming language
  * @argc: number of arguments
@@ -14,6 +11,8 @@ int errorcount = 0;
 
 int main(__attribute__((unused)) int argc, char **argv, char **env)
 {
+	int exitcode = 0;
+	int errorcount = 0;
 	char *user_input = NULL;
 	char **commands = NULL;
 	char **path_array = NULL;
