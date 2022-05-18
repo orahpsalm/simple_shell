@@ -3,7 +3,7 @@
 
 /**
  * display_splash_screen - display custom ascii art when programme starts
- * @file_ptr - pointer to .txt file that contains ascii art
+ * @file_ptr: pointer to .txt file that contains ascii art
  */
 
 void display_splash_screen(FILE *file_ptr)
