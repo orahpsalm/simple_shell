@@ -8,6 +8,7 @@
  *
  * Return: new env or alias.
  */
+
 char *copy_info(char *name, char *value)
 {
 	char *new;
@@ -25,6 +26,7 @@ char *copy_info(char *name, char *value)
 	return (new);
 }
 
+
 /**
  * set_env - sets an environment variable
  *
@@ -33,6 +35,7 @@ char *copy_info(char *name, char *value)
  * @datash: data structure (environ)
  * Return: no return
  */
+
 void set_env(char *name, char *value, data_shell *datash)
 {
 	int i;
@@ -57,6 +60,7 @@ void set_env(char *name, char *value, data_shell *datash)
 	datash->_environ[i + 1] = NULL;
 }
 
+
 /**
  * _setenv - compares env variables names
  * with the name passed.
@@ -64,6 +68,7 @@ void set_env(char *name, char *value, data_shell *datash)
  *
  * Return: 1 on success.
  */
+
 int _setenv(data_shell *datash)
 {
 
@@ -78,6 +83,7 @@ int _setenv(data_shell *datash)
 	return (1);
 }
 
+
 /**
  * _unsetenv - deletes a environment variable
  *
@@ -85,6 +91,7 @@ int _setenv(data_shell *datash)
  *
  * Return: 1 on success.
  */
+
 int _unsetenv(data_shell *datash)
 {
 	char **realloc_environ;
