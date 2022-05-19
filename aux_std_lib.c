@@ -5,6 +5,7 @@
  * @n: type int number.
  * Return: Lenght of a number.
  */
+
 int get_len(int n)
 {
 	unsigned int n1;
@@ -27,11 +28,14 @@ int get_len(int n)
 
 	return (lenght);
 }
+
+
 /**
  * aux_itoa - function converts int to string.
  * @n: type int number
  * Return: String.
  */
+
 char *aux_itoa(int n)
 {
 	unsigned int n1;
@@ -64,6 +68,7 @@ char *aux_itoa(int n)
 		;
 	return (buffer);
 }
+
 
 /**
  * _atoi - converts a string to an integer.
