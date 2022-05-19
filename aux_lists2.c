@@ -5,7 +5,7 @@
  * of a r_var list.
  * @head: head of the linked list.
  * @lvar: length of the variable.
- * @val: value of the variable.
+ * @val: value of var.
  * @lval: length of the value.
  * Return: address of the head.
  */
@@ -34,15 +34,16 @@ r_var *add_rvar_node(r_var **head, int lvar, char *val, int lval)
 			temp = temp->next;
 		temp->next = new;
 	}
-
 	return (*head);
 }
+
 
 /**
  * free_rvar_list - frees a r_var list
  * @head: head of the linked list.
  * Return: no return.
  */
+
 void free_rvar_list(r_var **head)
 {
 	r_var *temp;
